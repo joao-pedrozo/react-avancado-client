@@ -43,8 +43,6 @@ const GlobalStyles = createGlobalStyle`
             font-family: ${theme.font.family};
         }
     `} 
-
-    
 `;
 
 export default GlobalStyles;
