@@ -4,7 +4,7 @@ module.exports = {
         '@storybook/addon-essentials', 
     ],
     webpackFinal: (config) => {
-      config.resolve.modules.push(`${process.cwd()}/src`)
+      config.resolve.modules.push(`${process.cwd()}/src`) // Add absolute path to storybook acess, process.cwd acess root paste
       return config
     }
   }
