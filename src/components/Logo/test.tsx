@@ -22,4 +22,18 @@ describe('<Logo />', () => {
             color: '#030517'
         });
     });
+
+    it('should render the default size when size prop is not passed', () => {
+        renderWithTheme(<Logo />);
+        expect(screen.getByLabelText(/Won Games/i).parentElement).toHaveStyle({
+            width: '11rem'
+        });
+    });
+
+    it('should render the large size when large prop is passed', () => {
+        renderWithTheme(<Logo size="large" />);
+        expect(screen.getByLabelText(/Won Games/i).parentElement).toHaveStyle({
+            width: '20rem'
+        });
+    });
 });
